@@ -1,0 +1,32 @@
+#!/bin/sh
+
+CUR_DIR=`dirname $0`
+CUR_DIR=`pwd $CUR_DIR`
+cd $CUR_DIR
+
+ORIG_NAME="morbid-0.8.7.3"
+NAME="python26-morbid"
+RELEASE=1
+PACKAGER="Nick Bailey - nick@riptano.com"
+REQUIRES="python26-stomper, python26-twisted, python26-zope.interface, python26-simplejson"
+BUILD_REQUIRES=""
+
+# copy to a directory for building
+cp -r $ORIG_NAME $NAME/
+#apply any patches
+for patch_file in patches/*
+do
+    patch -p1 -d $NAME < $patch_file
+done
+
+# build rpms
+cd $NAME
+python2.6 setup.py bdist_rpm \
+        --python="python2.6" \
+        --dist-dir="$CUR_DIR" \
+        --release="$RELEASE" \
+        --packager="$PACKAGER" 
+cd ..
+
+rm -r "$CUR_DIR/$NAME"
+

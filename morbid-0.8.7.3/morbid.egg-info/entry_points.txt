@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        morbid = morbid:main
+        morbid_restq_test = morbid.sample_restq.restq_dummy_daemon:main
+    

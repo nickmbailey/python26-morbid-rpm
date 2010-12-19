@@ -1,0 +1,11 @@
+--- a/setup.py	2009-08-30 06:24:08.000000000 +0000
++++ b/setup.py	2010-12-19 23:09:28.000000000 +0000
+@@ -1,7 +1,7 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+-    name='morbid',
++    name='python26-morbid',
+     version='0.8.7.3',
+     author='Michael Carter',
+     author_email='CarterMichael@gmail.com',

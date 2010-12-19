@@ -1,0 +1,18 @@
+Morbid is a Twisted-based publish/subscribe messaging server that uses the
+STOMP protocol. To use Morbid, run python setup.py install; then type morbid.
+For additional help, use morbid -h.
+
+It is named Morbid because it is a sin against humanity. Whoever writes new MQs
+without good reason should be shot. Morbid exists only to provide basic
+publish/subscribe functionality to orbited users that don't know how to
+download and start a real message queue. For some reason, no one likes the
+idea of doing anything in a reasonable, coherent way with more than one 
+process, ever.
+
+If you want a real message queue that speaks STOMP (or some almost-STOMP) then
+check out RabbitMQ (www.rabbitmq.com) or ActiveMQ (http://activemq.apache.org/)
+
+If you want to extend this server in some way for some reason, then feel free;
+just email the Orbited mailing list (orbited-users@groups.google.com) with your
+patches. If this happens a lot, I'll create a mailing list and make the 
+repoistory public.
