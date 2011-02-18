@@ -25,7 +25,8 @@ python2.6 setup.py bdist_rpm \
         --python="python2.6" \
         --dist-dir="$CUR_DIR" \
         --release="$RELEASE" \
-        --packager="$PACKAGER" 
+        --packager="$PACKAGER" \
+        --requires="$REQUIRES"
 cd ..
 
 rm -r "$CUR_DIR/$NAME"
